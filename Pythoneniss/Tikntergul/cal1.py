@@ -1,0 +1,21 @@
+import tkinter as tk
+def add_numbers():
+    n1 = int(e1.get())
+    n2 = int(e2.get())
+    n3 = int(e3.get())
+    result = n1 + n2 + n3
+    label.config(text="Result: " + str(result))
+root = tk.Tk()
+root.title("Add 3 Numbers")
+root.geometry("300x250")
+e1 = tk.Entry(root)
+e1.pack()
+e2 = tk.Entry(root)
+e2.pack()
+e3 = tk.Entry(root)
+e3.pack()
+btn = tk.Button(root, text="Add", command=add_numbers)
+btn.pack()
+label = tk.Label(root, text="")
+label.pack()
+root.mainloop()
